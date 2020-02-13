@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" />
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+           
+    <script>
+        var dataSet = [
+            ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800"],
+            ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750"],
+            ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000"],
+            ["Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012/03/29", "$433,060"]           
+        ];
+
+        $("#btntest").click(function(){
+
+            alert("I'm clicked...");
+            
+        });
+
+        $(document).ready(function () {
+            var datatable = $('#example');
+
+            datatable.DataTable({
+                data: dataSet,
+                columns: [
+                    { title: "Name" },
+                    { title: "Position" },
+                    { title: "Office" },
+                    { title: "Extn." },
+                    { title: "Start date" },
+                    { title: "Salary" }
+                ]
+            });
+
+            $("#btnAdd").click(function () {
+                alert();
+                var newdata = ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800"];
+                //dataSet.push(newdata);
+                datatable.DataTable().row.add(newdata);
+                datatable.DataTable().draw();
+                //datatable.DataTable.
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <table id="example" class="display" width="100%"></table>
+
+    <button id="btnAdd"  >Add more</button>
+
+    <button id="btntest">  test button</button>
+</body>
+
+</html>

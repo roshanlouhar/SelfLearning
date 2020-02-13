@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+
+    <script>
+        var app = angular.module('myApp', ["ngTable"]);
+
+        app.controller('customersCtrl', function ($scope, NgTableParams) {
+
+            function RefreshTable() {
+                $scope.tableParams = new NgTableParams(
+                    {
+                        page: 1,
+                        count: 10,
+                        //filter: {        //    //name: 'M'       // initial filter                   //},
+                        sorting: { name: 'asc' }
+                    },
+                    {
+                        total: data.length,
+                        dataset: data
+                    }
+                );
+            };
+
+            var data = [{ name: "Roshan", age: 12 }, { name: "Ranjan", age: 334, money: 2121 }, { name: "Prateek", age: 122, money: 2121 },
+            { name: "Moroni", age: 50, money: 2121 },
+            { name: "Chhavi", age: 40, money: 2121 }];
+
+            $scope.tableParams;
+            RefreshTable();
+
+
+            $scope.columns = [
+                { title: 'Name', field: 'name', visible: true, filter: { 'name': 'text' } },
+                { title: 'Age', field: 'age', visible: true },
+                { title: 'Money', field: 'money', visible: true }
+            ];
+
+            $scope.Addmore = function () {
+                var newrecord = { name: "Tapan", age: 56, money: 2121 };
+                data.push(newrecord);
+                //$scope.tableParams = new NgTableParams({}, { dataset: data });
+                RefreshTable();
+            };
+
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="customersCtrl">
+
+        <table ng-table="tableParams" class="table">
+
+            <thead>
+                <tr>
+                    <th ng-repeat="column in columns" ng-show="column.visible" class="sortable" ng-class="{
+                        'sort-asc': tableParams.isSortBy(column.field, 'asc'),
+                        'sort-desc': tableParams.isSortBy(column.field, 'desc')
+                  }" ng-click="tableParams.sorting(column.field, tableParams.isSortBy(column.field, 'asc') ? 'desc' : 'asc')">
+                        {{column.title}}
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="user in $data">
+                    <td ng-repeat="column in columns" ng-show="column.visible" sortable="column.field">
+                        {{user[column.field] ||  user[column.field]}}
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+        <button ng-click="Addmore()">Add more row...</button>
+    </div>
+
+
+</body>
+
+</html>
