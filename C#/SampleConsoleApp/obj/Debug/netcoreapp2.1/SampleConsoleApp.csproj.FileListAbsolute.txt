@@ -1,0 +1,12 @@
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\bin\Debug\netcoreapp2.1\SampleConsoleApp.deps.json
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\bin\Debug\netcoreapp2.1\SampleConsoleApp.runtimeconfig.json
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\bin\Debug\netcoreapp2.1\SampleConsoleApp.runtimeconfig.dev.json
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\bin\Debug\netcoreapp2.1\SampleConsoleApp.dll
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\bin\Debug\netcoreapp2.1\SampleConsoleApp.pdb
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.csprojAssemblyReference.cache
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.csproj.CoreCompileInputs.cache
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.AssemblyInfoInputs.cache
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.AssemblyInfo.cs
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.dll
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.pdb
+C:\DATA\WorkCode\SelfLearning\C#\SampleConsoleApp\obj\Debug\netcoreapp2.1\SampleConsoleApp.genruntimeconfig.cache

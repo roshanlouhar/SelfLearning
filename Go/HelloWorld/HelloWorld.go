@@ -13,7 +13,21 @@ func fib() func() int {
 }
 
 func main() {
-	f := fib()
+	//f := fib()
 	// Function calls are evaluated left-to-right.
-	fmt.Println(f(), f(), f(), f(), f())
+	//fmt.Println(f())
+
+	intnum := 10
+	str := "Roshan"
+	floatnum := 10.222
+
+	fmt.Println(floatnum)
+	fmt.Println(intnum)
+	fmt.Println(str)
+
+	// if (intnum < 10)
+	// 	{fmt.Println("number is less then")}
+	// else
+	// {fmt.Println("number is greater then")}
+
 }
